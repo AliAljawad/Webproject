@@ -1,0 +1,39 @@
+
+  nav {
+    z-index: 1; /* Increase the z-index value to make the nav appear on top */
+    position: relative; /* Add position: relative to give the nav a z-index reference point */
+    background-color: #333;
+    overflow: hidden;
+  }
+
+nav ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+nav ul li {
+  list-style: none;
+  flex: 1;
+}
+
+nav ul li a {
+  display: block;
+  color: #fff;
+  text-decoration: none;
+  text-align: center;
+  padding: 10px 0;
+}
+
+nav ul li a:hover {
+  background-color: #444;
+}
+
+body {
+background: url('students.jfif');
+background-repeat: no-repeat;
+background-size: 1000px 700px;
+background-attachment: fixed;
+background-position: 50% 50%;
+z-index: 0;  
+}

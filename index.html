@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>login</title>
+		<meta charset="UTF-8" />
+		<style>
+		a {
+      width: 100%;
+      background-color: #4CAF50;
+      color: white;
+      padding: 14px 1px;
+      margin: 8px 0;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      background-color: #45a049;
+	  text-decoration:none;
+	    display: inline-block;
+		text-align:center;
+}
+    }
+
+a:hover {
+  background-color: #45a049;
+}
+
+		body
+		{
+		font-family: Arial, sans-serif;
+				text-align:center;
+  background: url(back.jpeg);
+  background-repeat: no-repeat;
+  background-size: 1500px 700px;
+   background-attachment: fixed;
+  background-position: 50% 50%;  
+}
+
+			
+	form {
+      width: 20%;
+      margin: 0 auto;
+      text-align: left;
+      padding: 20px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+	  background-color: white;
+    }
+    header h1 {
+  margin: 0;
+  font-size: 2em;
+}
+    label {
+      display: block;
+      margin-bottom: 8px;
+    }
+    input[type="text"],
+    input[type="password"] {
+      width: 100%;
+      padding: 12px 20px;
+      margin-bottom: 20px;
+      box-sizing: border-box;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+	input[type="submit"] {
+      width: 100%;
+      background-color: #4CAF50;
+      color: white;
+      margin: 8px 0;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      background-color: #45a049;
+	  display: inline-block;
+ padding: 14px 20px;
+
+    }
+	header {
+  width: 100%;
+  background-color: #333;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+}
+		</style>
+	</head>
+	
+	<body>
+		<h1>German and Russian College</h1>
+		<form method="POST" onsubmit="return validateForm()" action="2-login.php" >
+			<input type="text"     name="sid"     placeholder="Enter your id" onkeydown="return isNumberKey(event)"/></br>
+			<input type="password" name="spasswd" placeholder="Password"/></br>
+			<input type="submit"   value="Login"/></br>
+			<a href="registrationform.php">sign up</a></br>
+		</form>
+		<div class="body">
+  <div class="overlay">
+  </div>
+</div>
+	</body>
+	<script src="time.js"></script>
+<script>
+  function isNumberKey(evt) {
+    var charCode = (evt.which) ? evt.which : event.keyCode;
+    if (charCode > 31 && (charCode < 48 || charCode > 57))
+      return false;
+    return true;
+  }
+  function validateForm() {
+  // Get all the input elements in the form
+  var inputs = document.getElementsByTagName("input");
+
+  // Loop through all the input elements
+  for (var i = 0; i < inputs.length; i++) {
+    // Check if the current input element is empty
+    if (inputs[i].value == "") {
+      // If the input element is empty, display an alert message and return false
+      alert("Please fill in all the fields.");
+      return false;
+    }
+  }
+
+  // If all the fields are filled in, return true
+  return true;
+}
+</script>
+
+</html>

@@ -1,0 +1,1 @@
+Create a DB called UMS, then import your info
